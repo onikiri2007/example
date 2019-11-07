@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "884367536605",
+    "firebase_url": "https://yodel-cd040.firebaseio.com",
+    "project_id": "yodel-cd040",
+    "storage_bucket": "yodel-cd040.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884367536605:android:2cba1ba67d674953",
+        "android_client_info": {
+          "package_name": "co.yodelit.yodel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884367536605-vue3af58v3g35ge5gofv1q52oih9mqhu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.yodelit.yodel",
+            "certificate_hash": "93d9b07a544c597418badf11901cece3dc4af308"
+          }
+        },
+        {
+          "client_id": "884367536605-5hkcl3r0tmhhemd9vp63mugsa2ok19m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC613HSLOtC2hHA8npVKBzDTsUeDyRQkSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884367536605-5hkcl3r0tmhhemd9vp63mugsa2ok19m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

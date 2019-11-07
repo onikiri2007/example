@@ -1,0 +1,59 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+
+  lane :code_sign do |options|
+    app_id = options[:app_id]
+    profile = options[:profile]
+    team_id = options[:team_id];
+    identity = options[:identity]
+    profile_uuid = options[:profile_uuid]
+
+    if !identity
+      identity = "iPhone Distribution"
+    end
+
+    disable_automatic_code_signing(
+      path: "Runner.xcodeproj",
+      team_id: team_id,
+      code_sign_identity:identity,
+      profile_name:profile,
+      profile_uuid:profile_uuid,
+      bundle_identifier:app_id
+    )
+  end
+
+  lane :build_ipa do |options|
+
+    export_method = options[:method]
+    codesigning_identity = options[:codesigning_identity]
+
+   build_ios_app(
+      workspace: "Runner.xcworkspace",
+      configuration: "Release",
+      scheme: "Runner",
+      output_directory: "../build/ios/ipa", # Destination directory. Defaults to current directory.
+      output_name: "runner.ipa",       # specify the name of the .ipa file to generate (including file extension)
+      export_method:export_method,
+      archive_path: '../build/ios/iphoneos/Runner.app',
+      codesigning_identity: codesigning_identity
+    )
+
+  end
+end

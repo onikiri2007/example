@@ -1,0 +1,48 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "increment versions"
+  lane :increment_version do |options|
+
+      version_name = options[:version_name]
+      version_code = options[:version_code]
+
+    android_set_version_name(
+      version_name: version_name,
+      gradle_file: "app/build.gradle" # optional
+    )
+
+    android_set_version_code(
+      version_code: version_code, # optional, if not specified, Version Code will be incremented
+      gradle_file: "app/build.gradle" # optional
+    )
+  
+  end
+
+   desc "change package name"
+  lane :change_package_name do |options|
+
+    package_name = options[:package_name]
+    manifest = options[:manifest]
+    path = options[:path]
+
+    android_change_package_name(package_name:package_name, manifest:manifest, path:path)
+  
+  end
+ 
+end

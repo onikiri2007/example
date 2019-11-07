@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <defs>
+        <circle id="path-1" cx="20" cy="20" r="20"></circle>
+    </defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ProfilePic-Placeholder">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#EEEFF9" xlink:href="#path-1"></use>
+            <path d="M33,39.2496527 C33,39.6939874 32.6381899,40.062143 32.1938552,40.062143 L7.8061448,40.062143 C7.36816375,40.062143 7,39.6971561 7,39.2496527 C7,32.0705692 12.8207621,26.249807 19.9998456,26.249807 C27.1789291,26.249807 32.9996913,32.0705692 32.9996913,39.2496527 L33,39.2496527 Z M20.0001544,24.6248263 C15.9630523,24.6248263 12.6877412,21.3495152 12.6877412,17.3124132 C12.6877412,13.2753111 15.9630523,10 20.0001544,10 C24.0372564,10 27.3125675,13.2753111 27.3125675,17.3124132 C27.3125675,21.3495152 24.0372564,24.6248263 20.0001544,24.6248263 Z" id="Fill-1" fill="#AAB1B9" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

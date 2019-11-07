@@ -1,0 +1,22 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bluechilli.yodel",
+      "sha256_cert_fingerprints": [
+        "F0:B3:98:D6:30:71:8A:BC:E1:B4:1A:BD:A0:6D:00:4B:10:C0:A4:91:65:79:3D:F2:55:60:3D:7D:BA:D0:58:D8"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "co.yodelit.yodel",
+      "sha256_cert_fingerprints": [
+        "1B:4E:97:72:F3:36:4D:0D:70:5A:50:32:44:F8:94:5E:1E:20:2C:3D:4A:F3:7B:2D:AB:7E:F5:0F:12:E5:D3:FB"
+      ]
+    }
+  }
+]

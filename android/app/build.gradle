@@ -1,0 +1,103 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = 1
+if (flutterVersionCode == null) {
+    flutterVersionCode = 1
+}
+
+def flutterVersionName = '0.0.1'
+if (flutterVersionName == null) {
+    flutterVersionName = '0.0.1'
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+apply plugin: 'com.android.application'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    compileSdkVersion 28
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        applicationId "com.bluechilli.yodel"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "0.0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [hostName:"develop.yodelit.co"]
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        release {
+           
+        }
+    }
+
+    flavorDimensions "flavor-type"
+
+    productFlavors {
+        development {
+           dimension "flavor-type"
+           applicationId "com.bluechilli.yodel"
+           manifestPlaceholders = [hostName:"develop.yodelit.co", hostPath:"/EmailAccount"]
+        }
+        staging {
+           dimension "flavor-type"
+           applicationId "com.bluechilli.yodel"
+           manifestPlaceholders = [hostName:"staging.yodelit.co", hostPath:"/EmailAccount"]
+           signingConfig signingConfigs.debug
+        }
+        production {
+           dimension "flavor-type"
+           applicationId "co.yodelit.yodel"
+           manifestPlaceholders = [hostName:"admin.yodelit.co", hostPath:"/EmailAccount"]
+           signingConfig signingConfigs.release
+        }
+    }
+}
+
+
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+}
+
+apply plugin: 'com.google.gms.google-services'

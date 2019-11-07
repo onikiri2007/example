@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "82277630953",
+    "firebase_url": "https://yodel-stg.firebaseio.com",
+    "project_id": "yodel-stg",
+    "storage_bucket": "yodel-stg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82277630953:android:2f4102f77032a1e5",
+        "android_client_info": {
+          "package_name": "com.bluechilli.yodel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82277630953-cbpf4b5pveknkfq431d4scs0isgqe0f4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bluechilli.yodel",
+            "certificate_hash": "05533a0e4899623e840d70fcb533426ff5833acf"
+          }
+        },
+        {
+          "client_id": "82277630953-5rpa0f1g9v22f3k9v362au1113kg303b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO-S2LrMqTz0HJSOsr5O4G-1_Mdn9NoZg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82277630953-5rpa0f1g9v22f3k9v362au1113kg303b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

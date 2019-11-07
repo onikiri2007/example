@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="69px" height="128px" viewBox="0 0 69 128" version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <defs>
+        <rect id="path-1" x="0" y="0" width="78" height="134"></rect>
+    </defs>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="34" transform="translate(0.000000, -44.000000)">
+            <g id="BG-Pattern-Tealish" transform="translate(0.000000, 43.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <path d="M-27,144.938991 C-25.7074344,142.24122 5.14241418,78.9027879 46.6703278,82.6981539 C51.7019061,83.1591167 52.8983781,81.1347707 53.291392,80.4703932 C55.6634196,76.4592477 54.6996034,66.2545835 48.2663311,54.5091545 C37.27725,34.4461891 12.8867433,13.686728 -22.6151592,15.5942123 L-23.3540496,0.143136888 C18.632355,-2.11387698 47.6320221,22.7159898 60.7722973,46.704754 C69.6933946,62.9909004 71.4796148,78.7038968 65.5439378,88.7383199 C63.1954031,92.7119189 57.4594917,99.2124445 45.4459675,98.115151 C19.0105154,95.6979989 -6.50295313,136.192911 -14.1028387,152 L-27,144.938991 Z" id="Fill-1" fill="#2C6F70" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
