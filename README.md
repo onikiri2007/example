@@ -1,4 +1,4 @@
-# yodel
+# example app
 
 A new Flutter project.
 
